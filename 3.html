@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,
+        html,
+        canvas {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            background: url(img/bg1.png) center center / cover;
+            font-family: 'fz';
+            src: url('font/fz.TTF');
+            color: #ffffff;
+        }
+
+        .content {
+            width: 1700px;
+            height: 620px;
+            margin: 108px  auto 0px;
+        }
+        .content .back {
+            width: 103px;
+            height: 160px;
+            margin-right: 273px;
+            float: left;
+            background: url(img/back.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .content .back:hover {
+            background: url(img/back_hover.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .content .content_img {
+            width: 954px;
+            height: 700px;
+            float: left;
+            /*border: 1px solid #cccccc;*/
+        }
+        .content .content_img h5{
+            font-size: 40px;
+            width: 300px;
+            margin: 70px auto;
+            text-align: center;
+            font-weight: 400;
+        }
+        .content .content_img img {
+            width: 954px;
+            height: 537px;
+            float: left;
+            margin-bottom: 50px;
+        }
+        .content .continue {
+            float: right;
+            width: 103px;
+            height: 103px;
+            margin-top: 450px;
+            background: url(img/continue.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        .content .continue:hover {
+            background: url(img/continue_hover.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .node {
+            width: 287px;
+            height: 89px;
+            margin: 0 77px 110px;
+            position: relative;
+            float: left;
+            text-align: center;
+            background: url(img/index/bt.png) center center / cover;
+        }
+
+        .footer {
+            font-size: 28px;
+            text-indent:56px;
+            width: 1548px;
+            margin: 100px auto 0px;
+            position: relative;
+            color: #4a494a;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <a href="index.html">
+        <div class="back"></div>
+    </a>
+    <div class="content_img">
+        <img src="img/3.gif">
+        <h5>河流系统</h5>
+    </div>
+    <a href="3-1.html">
+        <div class="continue"></div>
+    </a>
+</div>
+<div class="footer">      河流实验槽断面为6m×0.8m、长38m，设计有河流供水加沙系统、地壳升降模拟装置、多功能自动控制测桥等。
+    地壳升降模拟装置由12块2m×2m的升降单元按照4×3的格局组成，每个单元可以进行升降和多方位倾斜等姿态变化，可以实现82种地壳变形姿态的模拟。变形速度可以控制在每天30mm -70mm。
+    多功能自动控制测桥体长6.0m，架设测流装置，测桥可以移动测量水位、流速等断面参数。
+</div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>

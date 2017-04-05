@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,
+        html,
+        canvas {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        body {
+            background: url(img/3/bg3-1.png) center center / cover;
+            font-family: 'fz';
+            src: url('font/fz.TTF');
+            color: #ffffff;
+        }
+
+        .content {
+            width: 1700px;
+            height: 620px;
+            margin: 158px  auto 0px;
+        }
+        .content .left_side {
+            width: 103px;
+            height: 103px;
+            margin-right: 140px;
+            margin-top: 400px;
+            float: left;
+        }
+        .content .left_side .item {
+            width: 103px;
+            height: 103px;
+            margin-top: 30px;
+        }
+        .content .home {
+            background: url(img/home.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .content .home:hover {
+            background: url(img/home_hover.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .content .back {
+            background: url(img/back.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .content .back:hover {
+            background: url(img/back_hover.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .content .content_img {
+            width: 1080px;
+            height: 610px;
+            float: left;
+            border: 1px solid #cccccc;
+            color: #4a494a;
+        }
+        .content .content_img .node span{
+            width: 100px;
+            display: block;
+        }
+        .node1 {
+            position: relative;
+            display: block;
+            /*margin-left: 420px;*/
+            /*margin-top: 345px;*/
+            margin-left: 360px;
+            margin-top: 315px;
+        }
+        .node2 {
+            position: relative;
+            display: block;
+            left: 598px;
+            top: -31px;
+        }
+        .node3 {
+            position: relative;
+            display: block;
+            left: 714px;
+            top: 37px;
+        }
+        .node {
+            width: 60px;
+            height: 20px;
+        }
+        .node ul {
+            list-style: none;
+            height: 20px;
+            padding-left: 0px;
+            padding: 0;
+            margin: 0;
+        }
+        .node ul li {
+            float: left;
+            padding: 10px;
+            margin-right: 0px;
+            /*background: url(img/0.png) center center / cover;*/
+            background-size: 20px 20px;
+        }
+        .bg0 {
+            background: url(img/3/0.gif) center center / cover;
+        }
+        .bg1 {
+            background: url(img/3/1.gif) center center / cover;
+        }
+        .bg2 {
+            background: url(img/3/2.gif) center center / cover;
+        }
+        .bg3 {
+            background: url(img/3/3.gif) center center / cover;
+        }
+        .node ul .active {
+            background: url(img/3/bag_hover.png) center center / cover;
+        }
+
+        .content .right_side {
+            float: right;
+            width: 235px;
+            height: 650px;
+            margin-top: -40px;
+            margin-right: 0px;
+            overflow: hidden;
+            /*border: 1px solid #dddddd;*/
+        }
+
+        .bags {
+            width: 350px;
+            height: 30px;
+            margin: 5px 0;
+        }
+        .bags span {
+            float: left;
+            padding-right: 15px;
+            font-size: 16px;
+        }
+        .bags ul {
+            list-style: none;
+            height: 30px;
+            padding-left: 0px;
+        }
+        .bags ul li {
+            float: left;
+            padding: 15px;
+            margin-right: 13px;
+            background: url(img/3/bag.png) center center / cover;
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+        }
+        .bags ul li:hover {
+            background: url(img/3/bag_hover.png) center center / cover;
+            background-size: 30px 30px;
+        }
+        .bags ul .active {
+            background: url(img/3/bag_hover.png) center center / cover;
+            background-size: 30px 30px;
+        }
+        .right_side .confirm {
+            height: 43px;
+            width: 88px;
+            text-align: center;
+            line-height: 43px;
+            margin: 55px auto;
+        }
+
+        .right_side .right_side_bottom .confirm {
+            background: url(img/3/confirm.png) center center / cover;
+            background-size: 88px 43px;
+            background-repeat: no-repeat;
+        }
+        .right_side .right_side_bottom .confirm:hover {
+            background: url(img/3/confirm_hover.png) center center / cover;
+            background-repeat: no-repeat;
+            background-size: 88px 43px;
+        }
+        h3 {
+            font-size: 20px;
+            padding: 20px 0 0 0;
+            margin: 10px 0;
+            font-weight: 400;
+        }
+        h3 span {
+            color: #4a494a;
+            font-size: 36px;
+        }
+        h3 div {
+            width: 0px;
+            height: 0px;
+            padding: 15px;
+            margin-right: 28px;
+            margin-top: 12px;
+            background: url(img/3/bag_hover.png) center center / cover;
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            float: right;
+        }
+        .footer {
+            color: #4a494a;
+            font-size: 54px;
+            width: 550px;
+            margin: 130px auto 0px;
+            position: relative;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="left_side">
+        <a href="3.html">
+            <div class="item back"></div>
+        </a>
+        <!--<a href="index.html">-->
+            <!--<div class="item home"></div>-->
+        <!--</a>-->
+    </div>
+    <div class="content_img bg0">
+        <div class="node node1">
+            <span>危险点1: </span>
+            <ul>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+        <div class="node node2">
+            <span>危险点2: </span>
+            <ul>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+        <div class="node node3">
+            <span>危险点3: </span>
+            <ul>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right_side">
+        <h3>洪水要来了，请将沙包在3个可能发生溃坝的危险点进行分配：</h3>
+        <h3>剩余沙包数: <span>6 x </span><div class=""></div></h3>
+
+        <div class="bags">
+            <span>危险点1: </span>
+            <ul>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+        <div class="bags">
+            <span>危险点2: </span>
+            <ul>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+        <div class="bags">
+            <span>危险点3: </span>
+            <ul>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+        <!--<div class="confirm">确定</div>-->
+        <div class="right_side_bottom">
+            <div class="confirm"></div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    河流演变互动演示系统
+</div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var n = 6, l1 = 0, l2 = 0, l3 = 0;
+        $(".bags ul li").click(function(e){
+            console.log($(this).index() );
+//            console.log($(".bags ul").index($(this).parent("ul")));
+            var l = $(".bags ul").index($(this).parent("ul"));
+
+//            console.log($(this).parent("ul").find("li").index($(this)));
+            var i = $(this).parent("ul").find("li").index($(this));
+
+            if($(this).hasClass("active")) {
+                $(this).removeClass("active");
+            } else {
+                if (n != 0) {
+                    $(this).addClass("active");
+                }
+            }
+//            console.log($(".node ul")[l]);
+            var Lnode = $(".node ul").eq(l).children("li").eq(i);
+            if(Lnode.hasClass("active")){
+                Lnode.removeClass("active")
+                n++;
+                if (l == 0) {
+                    l1--;
+                } else if (l == 1) {
+                    l2--;
+                } else if (l == 2) {
+                    l3--;
+                }
+            } else {
+                if(n != 0 ){
+                    Lnode.addClass("active");
+                    n--;
+
+                    if (l == 0) {
+                        l1++;
+                    } else if (l == 1) {
+                        l2++;
+                    } else if (l == 2) {
+                        l3++;
+                    }
+
+                } else {
+                    alert("沙包已用完");
+                }
+            }
+            $("h3 span").html(n+" x ");
+            console.log(n);
+//            $(".node ul")[l].find("li")[i].addClass("active");
+        });
+
+        $(".confirm").click(function(e){
+            console.log(l1);
+            console.log(l2);
+            console.log(l3);
+            $(".content .content_img").removeClass("bg1").removeClass("bg2").removeClass("bg3");
+            if(l1 < 3){
+                $(".content .content_img").addClass("bg1");
+                alert('应对洪水失败，发生了溃坝！');
+            } else if (l1 == 3 && l2 < 2) {
+                $(".content .content_img").addClass("bg2");
+                alert('应对洪水失败，发生了溃坝！');
+            } else if (l1 == 3 && l2 >= 2 && l3 < 1) {
+                $(".content .content_img").addClass("bg3");
+                alert('应对洪水失败，发生了溃坝！');
+            } else if (l1 == 3 && l2 >= 2 && l3 == 1){
+                alert("恭喜你，成功应对了洪水！");
+            }
+        })
+    });
+</script>
+
+</body>
+</html>

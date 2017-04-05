@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script language="JavaScript">
+        function move()
+        {
+            document.getElementById("Layer1").style.left=Math.random()*500;
+            document.getElementById("Layer1").style.top=Math.random()*500;
+            setTimeout("move()",500);
+        }
+    </script>
+</head>
+<body onload="move()">
+<div id="Layer1" style="position:absolute;left:14px;top:44px;width:150px;height:102px;z-index:1">
+    <a href="http://www.baidu.com">
+        <img src="aa.jpg" width="100" height="100">
+    </a>
+</div>
+</body>
+</html>

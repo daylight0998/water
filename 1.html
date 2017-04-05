@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,
+        html,
+        canvas {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            background: url(img/bg1.png) center center / cover;
+            font-family: 'fz';
+            src: url('font/fz.TTF');
+            color: #ffffff;
+        }
+
+        .content {
+            width: 1700px;
+            height: 620px;
+            margin: 108px  auto 0px;
+        }
+        .content .back {
+            width: 103px;
+            height: 160px;
+            margin-right: 273px;
+            float: left;
+            background: url(img/back.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .content .back:hover {
+            background: url(img/back_hover.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .content .content_img {
+            width: 954px;
+            height: 700px;
+            float: left;
+            /*border: 1px solid #cccccc;*/
+        }
+        .content .content_img h5{
+            font-size: 40px;
+            width: 500px;
+            margin: 70px auto;
+            text-align: center;
+            font-weight: 400;
+        }
+        .content .content_img img {
+            width: 954px;
+            height: 537px;
+            float: left;
+            margin-bottom: 50px;
+        }
+        .content .continue {
+            float: right;
+            width: 103px;
+            height: 103px;
+            margin-top: 450px;
+            background: url(img/continue.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        .content .continue:hover {
+            background: url(img/continue_hover.png) center top / cover;
+            background-size: 103px 103px;
+            background-repeat: no-repeat;
+        }
+        .node {
+            width: 287px;
+            height: 89px;
+            margin: 0 77px 110px;
+            position: relative;
+            float: left;
+            text-align: center;
+            background: url(img/index/bt.png) center center / cover;
+        }
+
+        .footer {
+            font-size: 28px;
+            text-indent:56px;
+            width: 1548px;
+            margin: 100px auto 0px;
+            position: relative;
+            color: #4a494a;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a href="index.html">
+            <div class="back"></div>
+        </a>
+        <div class="content_img">
+            <img src="img/1.gif">
+            <h5>人工模拟降雨系统</h5>
+        </div>
+        <a href="1-1.html">
+            <div class="continue"></div>
+        </a>
+    </div>
+    <div class="footer">    人工模拟降雨系统由供水装置、降雨装置、控制中心组成，分为三个降雨区，总降雨面积为370平方米，降雨喷头高度18米，可模拟雨强变化、暴雨移动、分区分水质降雨。设计雨强范围为16-300mm，是目前世界上最先进的降雨模拟系统之一。</div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>

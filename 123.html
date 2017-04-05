@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <style type="text/css">
+        *{padding:0; margin:0; border:0;}
+        .left{width:50%; float:left;
+            animation:myfirst 5s;
+            -moz-animation:myfirst 5s; /* Firefox */
+            -webkit-animation:myfirst 5s; /* Safari and Chrome */
+            -o-animation:myfirst 5s; /* Opera */
+        }
+        .right{width:50%; float:left;
+            animation:myfirst 5s;
+            -moz-animation:myfirst 5s; /* Firefox */
+            -webkit-animation:myfirst 5s; /* Safari and Chrome */
+            -o-animation:myfirst 5s; /* Opera */
+            animation-delay: 5s; /* W3C 和 Opera */
+            -moz-animation-delay: 5s; /* Firefox */
+            -webkit-animation-delay: 5s; /* Safari 和 Chrome */
+        }
+        .right1{width:50%; float:left;
+            animation:myfirst 5s;
+            -moz-animation:myfirst 5s; /* Firefox */
+            -webkit-animation:myfirst 5s; /* Safari and Chrome */
+            -o-animation:myfirst 5s; /* Opera */
+            animation-delay: 5s; /* W3C 和 Opera */
+            -moz-animation-delay: 5s; /* Firefox */
+            -webkit-animation-delay: 5s; /* Safari 和 Chrome */
+        }
+        .right2{width:50%; float:left;
+            animation:myfirst 5s;
+            -moz-animation:myfirst 5s; /* Firefox */
+            -webkit-animation:myfirst 5s; /* Safari and Chrome */
+            -o-animation:myfirst 5s; /* Opera */
+            animation-delay: 5s; /* W3C 和 Opera */
+            -moz-animation-delay: 5s; /* Firefox */
+            -webkit-animation-delay: 5s; /* Safari 和 Chrome */
+        }
+        @keyframes myfirst
+        {
+            0%   { opacity:0;}
+            100% { opacity:1;}
+        }
+        @-moz-keyframes myfirst /* Firefox */
+        {
+            0%   { opacity:0;}
+            100% { opacity:1;}
+        }
+        @-webkit-keyframes myfirst /* Safari 和 Chrome */
+        {
+            0%   { opacity:0;}
+            100% { opacity:1;}
+        }
+        @-o-keyframes myfirst /* Opera */
+        {
+            0%   { opacity:0;}
+            100% { opacity:1;}
+        }
+    </style>
+</head>
+<body>
+<pre id="aa"></pre>
+<div style="display:none" id="w">谈及航母的改建工程，
+    当时为了解决现场建设困难，他们做了大量的工作：一是统筹好所有的工作项目，精确安排每人每天的任务，最忙的时候精确到每个小时的具体任务；二是提高所有的施工质量，通过<a href="https://www.baidu.com/s?wd=%E4%BF%9D%E8%AF%81%E8%B4%A8%E9%87%8F&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1YkmWcLP1IBP1fsPWcvPhPb0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EPHRdn1fznHms" target="_blank" class="baidu-highlight">保证质量</a>，在更大程度上节约时间；三是加班加点。
+    “通过这三个方面的手段，才把时间给抢回来。”<a href="https://www.baidu.com/s?wd=%E7%8E%8B%E6%B2%BB%E5%9B%BD&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1YkmWcLP1IBP1fsPWcvPhPb0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EPHRdn1fznHms" target="_blank" class="baidu-highlight">王治国</a>回忆，“因为我们在北方，那一年遇上了五十年不遇的严寒。前面的很多土建工作，受温度影响很大，耽误了时间。为了抢进度，最后我们把时间抢回来了。”
+</div>
+<script language="javascript">
+    var index=0;
+    var word=document.getElementById("w").innerHTML;
+    function type(){
+        document.getElementById("aa").innerText = word.substring(0,index++);
+    }
+    setInterval(type, 200);
+</script>
+<div>
+    <div class="left"> <img src="img/1.gif"> </div>
+    <div class="right"> 人工模拟降雨系统由供水装置、降雨装置、控制中心组成，分为三个降雨区，总降雨面积为370平方米，降雨喷头高度18米，可模拟雨强变化、暴雨移动、分区分水质降雨。设计雨强范围为16-300mm，是目前世界上最先进的降雨模拟系统之一。 </div>
+    <div class="right1"> 人工模拟降雨系统由供水装置、降雨装置、控制中心组成，分为三个降雨区，总降雨面积为370平方米，降雨喷头高度18米，可模拟雨强变化、暴雨移动、分区分水质降雨。设计雨强范围为16-300mm，是目前世界上最先进的降雨模拟系统之一。 </div>
+    <div class="right2"> 人工模拟降雨系统由供水装置、降雨装置、控制中心组成，分为三个降雨区，总降雨面积为370平方米，降雨喷头高度18米，可模拟雨强变化、暴雨移动、分区分水质降雨。设计雨强范围为16-300mm，是目前世界上最先进的降雨模拟系统之一。 </div>
+</div>
+</body>
+</html>
