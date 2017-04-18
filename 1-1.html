@@ -174,18 +174,31 @@
 
     </div>
 </div>
+<div style="display: none">
+    <audio id="audio" preload="auto" src="" controls></audio>
+</div>
 <div class="footer">
     人工降雨互动演示系统
 </div>
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">
     $(function() {
+        playAudio('small');
         $(".right_side .node").click(function(e){
-            $('.content_img img').attr('src',"img/1/" + $(this).data("attr") +".gif");
+            var type = $(this).data("attr");
+            $('.content_img img').attr('src',"img/1/" + type +".gif");
+            playAudio(type);
             $('.node').removeClass('active');
             $(this).addClass("active");
         });
     });
+    function playAudio(type) {
+        var a = $('#audio');
+        var url = "audio/" + type +".mp3"
+        console.log(url);
+        $(a).attr('src', url);
+        $(a)[0].play();
+    }
 </script>
 
 
